@@ -5,8 +5,7 @@
  */
 package algorithms.sorting;
 
-import algorithms.search.Searcher;
-import algorithms.search.impl.BinarySearch;
+import algorithms.sorting.impl.SelectionSort;
 
 /**
  *
@@ -17,12 +16,12 @@ public class Main {
     static Sorter s;
     
     static{
-        
+        s = new SelectionSort();
     }
     
     public static void main(String [ ] args)
     {
-        int arr[] = {64,25,12,22,11,78,90,45,9,23,67,10,38,0,12,23,9};
+        int arr[] = {64,25,12,22,11,34,56,89,12,0,23,12,49};
         
         s.sort(arr);
         
