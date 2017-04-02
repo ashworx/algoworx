@@ -5,6 +5,7 @@
  */
 package algorithms.search;
 
+import algorithms.search.impl.BinarySearch;
 import algorithms.search.impl.JumpSearch;
 
 /**
@@ -16,7 +17,7 @@ public class Main {
     static Searcher s;
     
     static{
-        s = new JumpSearch();
+        s = new BinarySearch();
     }
     
     public static void main(String [ ] args)
