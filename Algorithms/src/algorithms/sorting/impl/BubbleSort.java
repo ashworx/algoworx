@@ -11,29 +11,23 @@ import algorithms.sorting.Sorter;
  *
  * @author ashishgrover
  */
-public class SelectionSort extends Sorter{
-    
+public class BubbleSort extends Sorter{
+
     @Override
     public void sort(int[] arr) {
-        int min;
-        int pos = -1;
-        for(int i=0;i<arr.length-1;i++){
-            min = arr[i];
-            for(int j=i;j<arr.length;j++){
+        int temp;
+        for(int i=1;i<arr.length;i++){
+            for(int j=0;j<arr.length-i;j++){
                 comps++;
-                if(arr[j]<min){
-                    min = arr[j];
-                    pos = j;
+                if(arr[j]>arr[j+1]){
+                    swaps++;
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
                 }
             }
-            swaps++;
-            int temp = arr[i];
-            arr[i] = arr[pos];
-            arr[pos] = temp;
         }
         
-        
     }
-   
     
 }

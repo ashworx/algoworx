@@ -5,6 +5,7 @@
  */
 package algorithms.sorting;
 
+import algorithms.sorting.impl.BubbleSort;
 import algorithms.sorting.impl.SelectionSort;
 
 /**
@@ -23,10 +24,16 @@ public class Main {
     {
         int arr[] = {64,25,12,22,11,34,56,89,12,0,23,12,49};
         
+        long start = System.nanoTime();
         s.sort(arr);
+        long end = System.nanoTime();
         
         System.out.println("Sorted array");
         printArray(arr);
+        
+        System.out.println("Time to process: " + (end-start)/1000 + " micro sec");
+        System.out.println("No. of comparisons : " + s.getSwaps());
+        System.out.println("No. of swaps : " + s.getComps());
     }
     
     static void printArray(int arr[])

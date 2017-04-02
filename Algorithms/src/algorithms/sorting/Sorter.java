@@ -9,8 +9,19 @@ package algorithms.sorting;
  *
  * @author ashishgrover
  */
-public interface Sorter {
+public abstract class Sorter {
     
-    void sort(int[] arr);
+    public int swaps;
+    public int comps;
+    
+    public abstract void sort(int[] arr);
+    
+    public int getSwaps(){
+        return swaps;
+    }
+    
+    public int getComps(){
+        return comps;
+    }
     
 }
